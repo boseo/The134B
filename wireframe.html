@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<style type="text/css">
+<!--
+ #myCanvas{
+	position:absolute;
+	top: 55px;
+	left: 215px;
+	background-color:#FFFFFF;
+	border:1px solid #c3c3c3;
+	width:875px; 
+	height:600px; 
+	z-index:-1;
+  }
+ 
+ #wrapper{
+	clear:both;
+	margin:5px auto;
+	margin-top:auto;
+	border:0px solid #000;
+	font-size:10px;
+	font-family: verdana;
+}
+
+ul#level-one{
+	width:1050px;
+	height: 30px;
+	position: absolute;
+	list-style: none;
+	line-height:30px;
+	background:#f0f0f0 url("images/menu-back.png") repeat-x bottom left;/* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#f0f0f0)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFFFFF,  #f0f0f0); /* for firefox 3.6+ */ 
+}
+ul#level-one li{
+	width:40px;
+	float: left;
+	font-weight: bold;
+	font-family: Arial;
+	padding-left: 5px;
+}
+ul#level-one li:hover{
+	background:#FFA500;
+	height:30px;
+}
+ul#level-two,ul#level-three,ul#level-four{
+	list-style: none;
+	background:#FFA500 url(images/menu-grad.png) repeat-x bottom left; /* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFA500), to(#FF4500)); /* for webkit browsers */
+	background: -moz-linear-gradient(top, #FFA500, #FF4500); /* for firefox 3.6+ */ 
+	display:none;
+	position:relative;
+	top:0px;
+	padding:0px;
+	width:100px;
+	height:240px;
+	border:0px solid red;
+}
+ul#level-two li,ul#level-three li,ul#level-four li{
+	width:96px;
+	padding-left:4px ;
+	line-height: 30px;
+}
+ul#level-two li:hover, ul#level-three li:hover,ul#level-four li:hover{
+	background:#f0f0f0 url(images/menu-li.png) repeat-x bottom left;/* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#c0c0c0)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #fff,  #c0c0c0); /* for firefox 3.6+ */
+}
+ul#level-one li:hover > ul#level-two,ul#level-one li:hover > ul#level-three,ul#level-one li:hover > ul#level-four {
+	display: block;
+}
+a{
+	width:200px;
+	text-align: center;
+	text-decoration: none;
+	color:#000000;
+}
+
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="sdmenu.css" />
+<script type="text/javascript" src="sdmenu.js">
+</script>
+<script type="text/javascript">
+	var myMenu;
+	window.onload = function() {
+		myMenu = new SDMenu("my_menu");
+		myMenu.init();
+	};
+</script>
+
+</head>
+<body>
+
+<div id="wrapper">
+<ul id="level-one">
+<li>File
+	<ul id="level-two">
+		<li><a href="#">Save</a></li>
+		<li><a href="#">do</a></li>
+		<li><a href="#">undo</a></li>
+		<li><a href="#">reset</a></li>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+	</ul>
+</li>
+<li>Edit
+	<ul id="level-three">
+		<li><a href="#">copy</a></li>
+		<li><a href="#">paste</a></li>
+   		<li><a href="#">cut</a></li>
+	</ul>
+</li>
+<li>View
+	<ul id="level-four">
+		<li><a href="#">View1</a></li>
+		<li><a href="#">View2</a></li>
+	</ul>
+</li>
+<li>Help</li>
+<li><img src="images/buttons/BoldButton.png" width="25" height="29" alt="Bold"></li>
+<li><img src="images/buttons/ItalicButton.png" width="25" height="29" alt="Italic"></li>
+<li><img src="images/buttons/ColumnButton.png" width="25" height="29" alt="columns"></li>
+<li><img src="images/buttons/NumberColumn.png" width="25" height="29" alt="num"></li>
+<li><img src="images/buttons/smallabcButton.png" width="25" height="29" alt="abc"></li>
+<li><img src="images/buttons/UnderLineButton.png" width="25" height="29" alt="under"></li>
+<li><img src="images/buttons/UndoButton-9.png" width="25" height="29" alt="undo"></li>
+<li><img src="images/buttons/ForwardButton-9.png" width="25" height="29" alt="redo"></li>
+</ul>
+</div>
+ <div style="float: left" id="my_menu" class="sdmenu">
+      <div>
+      <span>All</span>
+      <a><img src="images/buttons/ButtonShadow-5.png" width="200" height="100" alt="button"></a>
+      <a><img src="images/buttons/PictureButton.png" width="30" height="27" alt="Image">
+      </a>
+      <a><img src="images/buttons/SmileyFaceButton.png" width="30" height="30" alt="smile">
+      </a>
+      </div>
+      <div>
+        <span>Buttons</span><a>
+      <img src="images/buttons/ButtonShadow-5.png" width="200" height="100" alt="button"></a>
+      </div>
+      <div>
+        <span>Forms</span>
+        
+      </div>
+   <div>
+        <span>Media</span>
+        
+      </div>
+      <div>
+        <span>Menu</span>
+      </div>
+      <div>
+        <span>Containers</span>
+      </div>
+      <div>
+        <span>Text</span>
+      </div>
+</div>
+
+<canvas id="myCanvas"></canvas>
+
+
+</body>
+</html>
